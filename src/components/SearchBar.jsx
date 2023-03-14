@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import TextField from '@mui/material/TextField';
+import Button from '@material-ui/core/Button';
 
 const SearchBar = ({ setUserName, setIsLoading }) => {
   const [query, setQuery] = useState('');
@@ -7,7 +9,7 @@ const SearchBar = ({ setUserName, setIsLoading }) => {
     <>
     <div className='row pt-4'>
       <div className='col-5 offset-3'>
-        <input
+      <TextField
             type="text"
             name="query"
             className="form-control"
@@ -18,13 +20,12 @@ const SearchBar = ({ setUserName, setIsLoading }) => {
           />
       </div>
       <div className='col-1'>
-      <button
-            className="btn btn-primary"
+      <Button variant='contained' color='primary'
             type="button"
             onClick={() => {
               setUserName(query);
               setIsLoading(true);
-            }}>search</button>
+            }}>search</Button>
       </div>
     </div>
     </>
