@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import SearchBar from './components/SearchBar';
 import { Octokit } from '@octokit/core';
 import Profile from './components/profile';
+import { Grid } from '@mui/material';
 
 function App() {
   let [userName, setUserName] = useState('');
@@ -22,7 +23,8 @@ function App() {
   // }, [userName]);
 
   return (
-      <div className={'App container-fluid' + (darkMode ? ' dark-mode' : ' light-mode')}>
+      <div className={'App ' + (darkMode ? ' dark-mode' : ' light-mode')}>
+        <Grid sx={{pt: 3}} rowSpacing={5} justifyContent="center" alignItems="center" container>
         <button
           className="but"
           onClick={() => {
@@ -35,6 +37,7 @@ function App() {
         <SearchBar setUserName={setUserName} setIsLoading={setIsLoading} />
         {octokit && userName ? (
           <Profile
+            darkMode={darkMode}
             user={userName}
             octokit={octokit}
             setIsLoading={setIsLoading}
@@ -43,6 +46,7 @@ function App() {
         ) : (
           <></>
         )}
+        </Grid>
       </div>
   );
 }
