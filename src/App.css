@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.input-group {
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  min-height: 100%;
+  height: auto;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  min-height: 100%;
+}
+
+.dark-mode {
+  background-color: #282c34;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  height: 100%;
+}
+
+.dark-mode {
+  min-height: 100%;
+  height: auto;
+}
+
+.dark-mode .card {
+  color: #282c34;
+}
+
+.dark-mode .but {
+  background-color: #282c34;
+  color: white;
+}
+
+.profile-content, profile-column-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avtar {
+  border-radius: 20px;
+  width: 70%;
+  float: left;
+  position: relative;
+}
+
+.but {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+  z-index: 100;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
